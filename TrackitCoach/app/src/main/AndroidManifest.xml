@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hippie.trackitcoach" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.hippie.trackitcoach.ui.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hippie.trackitcoach.ui.ChooseActivity"
+            android:label="@string/title_activity_choose"
+            android:screenOrientation="portrait" >
+            android:parentActivityName=".ui.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.hippie.trackitcoach.ui.ReviewMainActivity"
+            android:label="@string/title_activity_review_main"
+            android:screenOrientation="portrait" >
+            android:parentActivityName=".ui.ChooseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.ChooseActivity" />
+        </activity>
+        <activity
+            android:name="com.hippie.trackitcoach.ui.EventSetupActivity"
+            android:label="@string/title_activity_event_setup"
+            android:screenOrientation="portrait" >
+            android:parentActivityName=".ui.ChooseActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.ChooseActivity" />
+        </activity>
+        <activity
+            android:name="com.hippie.trackitcoach.ui.AthleteSelectActivity"
+            android:label="@string/title_activity_athlete_select"
+            android:screenOrientation="portrait" >
+            android:parentActivityName=".ui.EventSetupActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.EventSetupActivity" />
+        </activity>
+        <activity
+            android:name="com.hippie.trackitcoach.ui.SearchRecordsActivity"
+            android:label="@string/title_activity_search_records"
+            android:screenOrientation="portrait" >
+            android:parentActivityName=".ui.ReviewMainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.ReviewMainActivity" />
+        </activity>
+        <activity
+            android:name="com.hippie.trackitcoach.ui.AddAthleteActivity"
+            android:label="@string/title_activity_add_and_remove_athlete"
+            android:screenOrientation="portrait" >
+            android:parentActivityName=".ui.ReviewMainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.ReviewMainActivity" />
+        </activity>
+        <activity
+            android:name="com.hippie.trackitcoach.ui.RemoveAthleteActivity"
+            android:label="@string/title_activity_remove_athlete"
+            android:screenOrientation="portrait" >
+            android:parentActivityName=".ui.ReviewMainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.ReviewMainActivity" />
+        </activity>
+        <activity
+            android:name="com.hippie.trackitcoach.ui.RunEventActivity"
+            android:label="@string/title_activity_run_event"
+            android:screenOrientation="portrait" >
+            android:parentActivityName=".ui.AthleteSelectActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.AthleteSelectActivity" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.hippie.trackitcoach.ui.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" >
+>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.ChooseActivity" />
+        </activity>
+        <activity
+            android:name="com.hippie.trackitcoach.ui.ViewReportActivity"
+            android:label="@string/title_activity_view_report"
+            android:parentActivityName="com.hippie.trackitcoach.ui.SearchRecordsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.SearchRecordsActivity" />
+        </activity>
+        <activity
+            android:name="com.hippie.trackitcoach.ui.ReviewByAthleteSelectActivity"
+            android:label="@string/title_activity_review_by_athlete_select"
+            android:parentActivityName="com.hippie.trackitcoach.ui.SearchRecordsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.SearchRecordsActivity" />
+        </activity>
+        <activity
+            android:name="com.hippie.trackitcoach.ui.Athlete_Report"
+            android:label="@string/title_activity_athlete__report"
+            android:parentActivityName="com.hippie.trackitcoach.ui.ReviewByAthleteSelectActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.ReviewByAthleteSelectActivity" />
+        </activity>
+        <activity
+            android:name="com.hippie.trackitcoach.ui.ReviewByEventActivity"
+            android:label="@string/title_activity_event_report_view"
+            android:parentActivityName="com.hippie.trackitcoach.ui.SearchRecordsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.SearchRecordsActivity" />
+        </activity>
+        <activity
+            android:name="com.hippie.trackitcoach.ui.EventReportActivity"
+            android:label="@string/title_activity_event_report"
+            android:parentActivityName="com.hippie.trackitcoach.ui.ReviewByEventActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hippie.trackitcoach.ui.ReviewByEventActivity" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="eventList">
+        <item>60 Meters</item>
+        <item>100 Meters</item>
+        <item>200 Meters</item>,
+        <item>400 Meters</item>
+        <item>800 Meters</item>
+        <item>1500 Meters</item>
+        <item>3000 Meters</item>
+        <item>5000 Meters</item>
+        <item>10000 Meters</item>
+        <item>60 Meters Hurdles</item>
+        <item>100 Meters Hurdles</item>
+        <item>110 Meters Hurdles</item>
+        <item>400  Meters Hurdles</item>
+        <item>3000 Meters Steeplechase</item>,
+        <item>4X100 Meters</item>,
+        <item>4X400 Meters</item>
+        <item>Long Jump</item>
+        <item>Triple Jump</item>
+        <item>High Jump</item>
+        <item>Pole Vault</item>
+        <item>Shot Put</item>
+        <item>Discus Throw</item>
+        <item>Hammer Throw</item>
+        <item>Javelin Throw</item>
+        </string-array>
+
+        <string-array name="searchType">
+            <item>"None"</item>
+            <item>All Reports</item>
+            <item>By Athlete</item>
+            <item>By Event</item>
+        </string-array>
+</resources>

@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="com.hippie.trackitcoach.ui.SearchRecordsActivity"
+                android:background="@drawable/bg_gradient">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@android:id/list"
+        android:layout_below="@+id/linearLayout"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/linearLayout"
+        android:baselineAligned="false"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/search_type"
+            android:id="@+id/search_type_label"
+            android:layout_weight="1"
+            android:textAlignment="gravity"
+            android:gravity="center"
+            android:textSize="28sp"
+            android:textStyle="italic"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/search_type_spinner"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textAlignment="gravity"/>
+    </LinearLayout>
+
+</RelativeLayout>
